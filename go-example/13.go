@@ -6,7 +6,7 @@ func main() {
 
 }
 
-func listen(consumer Consumer[int]) {
+func listen(consumer Consumer2[int]) {
 	consumer(123)
 }
 
@@ -14,4 +14,4 @@ func myConsumer(val int) {
 	println(val)
 }
 
-type Consumer[T any] func(val T)
+type Consumer2[T any] func(val T)

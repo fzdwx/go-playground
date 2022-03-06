@@ -13,12 +13,12 @@ func main() {
 
 // DEMO1:
 func demo1() {
-	fmt.Println(test(func(i int, i2 int) int {
+	fmt.Println(test3(func(i int, i2 int) int {
 		return i + i2
 	}))
 }
 
-func test(add add) int {
+func test3(add add) int {
 	return add(1, 2)
 }
 
