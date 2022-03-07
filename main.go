@@ -24,14 +24,14 @@ type Tuple3[T1 any, T2 any, T3 any] struct {
 	t1 T1
 	t2 T2
 	t3 T3
-}
+} //a's'd
 
 func of2[T1 any, T2 any](t1 T1, t2 T2) Tuple2[T1, T2] {
 	return Tuple2[T1, T2]{
 		t1,
 		t2,
 	}
-}
+} // |="异步任务失败"
 
 func of3[T1 any, T2 any, T3 any](t1 T1, t2 T2, t3 T3) Tuple3[T1, T2, T3] {
 	return Tuple3[T1, T2, T3]{
