@@ -1,4 +1,4 @@
-package page
+package main
 
 import (
 	"container/list"

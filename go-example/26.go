@@ -1,23 +1,15 @@
-package page
+package main
 
 import (
+	"flag"
 	"fmt"
 )
 
-func main() {
+var countFlag = flag.Int("c", 0, "print the count")
 
-	//page := Page{Title: "qwe.txt"}
-	//err := load(&page)
-	//if err != nil {
-	//	fmt.Println(err)
-	//	return
-	//}
-	//
-	//fmt.Println(string(page.Body))
-	//var mu sync.Mutex
-	//mu.Lock()
-	go func() {
-		fmt.Println("helloworld")
-		//mu.Unlock()
-	}()
+func main() {
+	flag.PrintDefaults()
+	flag.Parse()
+
+	fmt.Println(*countFlag)
 }
