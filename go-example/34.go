@@ -17,6 +17,8 @@ func main() {
 
 	sem.Wait(1)
 	fmt.Println("main: done")
+	// https://github.com/unknwon/the-way-to-go_ZH_CN/blob/master/eBook/14.2.md#1427-%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%A8%A1%E5%BC%8F
+	// 习惯用法：通道工厂模式
 }
 
 func readTo(ch chan int, sem semaphore.Semaphore) {
