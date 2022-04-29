@@ -28,6 +28,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	/*https://github.com/unknwon/the-way-to-go_ZH_CN/blob/master/eBook/15.3.md*/
 }
 
 // Script returns a command to execute a script through a shell.
