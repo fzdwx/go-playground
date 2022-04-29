@@ -6,6 +6,6 @@ type OrderReq struct {
 }
 
 type OrderReply struct {
-	Id   string `json:"id"`
-	Name string `json:"name"`
+	Id   string `1.json:"id"`
+	Name string `1.json:"name"`
 }

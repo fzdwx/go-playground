@@ -25,7 +25,7 @@ type IdReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" 1.json:"id,omitempty"`
 }
 
 func (x *IdReq) Reset() {
@@ -73,11 +73,11 @@ type UserResp struct {
 	unknownFields protoimpl.UnknownFields
 
 	// 用户id
-	Id string `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Id string `protobuf:"bytes,1,opt,name=id,proto3" 1.json:"id,omitempty"`
 	// 用户名称
-	Name string `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
+	Name string `protobuf:"bytes,2,opt,name=name,proto3" 1.json:"name,omitempty"`
 	// 用户性别
-	Gender string `protobuf:"bytes,3,opt,name=gender,proto3" json:"gender,omitempty"`
+	Gender string `protobuf:"bytes,3,opt,name=gender,proto3" 1.json:"gender,omitempty"`
 }
 
 func (x *UserResp) Reset() {

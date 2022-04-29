@@ -1,35 +1,44 @@
 package main
 
 import (
-	"fmt"
-	"time"
+	fmt "fmt"
+	"testing"
 )
 
 func main() {
 
-	fmt.Println("in main")
+	for i := 0; i < 100; i++ {
+		fmt.Printf("is the integer %d even? %v\n", i, Even(i))
+	}
+}
 
-	go longWait()
-	go shortWait()
+func Even(i int) bool {
+	return i%2 == 0
+}
 
-	fmt.Println("about sleep in main()")
-	time.Sleep(20 * time.Second)
+func Odd(i int) bool {
+	return i%2 != 0
+}
 
-	fmt.Println("at the end of main()")
+func TestEven(t *testing.T) {
+	if !Even(10) {
+		t.Log(" 10 must be even!")
+		t.Fail()
+	}
+	if Even(7) {
+		t.Log(" 7 is not even!")
+		t.Fail()
+	}
 
 }
 
-func shortWait() {
-
-	fmt.Printf("start shortWait() %v\n", time.Now().UnixNano())
-	time.Sleep(2 * time.Second)
-
-	fmt.Println("end shortWait()")
-}
-
-func longWait() {
-
-	fmt.Printf("start longWait() %v\n", time.Now().UnixNano())
-	time.Sleep(10 * time.Second)
-	fmt.Println("end longWait()")
+func TestOdd(t *testing.T) {
+	if !Odd(11) {
+		t.Log(" 11 must be odd!")
+		t.Fail()
+	}
+	if Odd(10) {
+		t.Log(" 10 is not odd!")
+		t.Fail()
+	}
 }
