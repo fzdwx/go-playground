@@ -1,0 +1,21 @@
+{
+  "data": {
+    "boxOwnerId": "111111111111",
+    "boxOwnerSeq": "3",
+    "contactType": 11001,
+    "fromAvatar": "",
+    "fromId": "0",
+    "fromUname": "系统",
+    "handlerResult": 1,
+    "handlerTime": "2022-04-29T12:11:13.4743182",
+    "message": {
+      "operatorAvatar": "http://114.132.249.192:9000/chat/1651041130000/309698727839571968blob",
+      "operatorId": "444444444444",
+      "operatorNickName": "zhiyuan"
+    },
+    "msgFrom": 2,
+    "requestId": "310388031352016896",
+    "toId": "111111111111"
+  },
+  "notifyType": "contact"
+}
