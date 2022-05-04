@@ -4,6 +4,8 @@ package array
   解题思路:
    1. 用一个map保存我们需要的数 key 是我们需要的数，value 是该数在nums中的下标
    2. 遍历nums 数组，如果map中存在该数，则返回该数的下标，以及当前的i
+
+https://books.halfrost.com/leetcode/ChapterFour/0001~0099/0001.Two-Sum/
 */
 
 func twoSum(nums []int, target int) []int {
