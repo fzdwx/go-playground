@@ -24,6 +24,32 @@ func twoSum(nums []int, target int) []int {
 
 }
 
+func s2(nums []int, target int) []int {
+	left := 0
+	right := len(nums) - 1
+	result := []int{0, 0}
+	m := make(map[int]int)
+
+	for left <= right {
+		if v, ok := m[target-nums[left]]; ok {
+			result[0] = left
+			result[1] = v
+			break
+		}
+
+		m[nums[left]] = left
+		if v, ok := m[target-nums[right]]; ok {
+			result[0] = right
+			result[1] = v
+			break
+		}
+		m[nums[right]] = right
+		right--
+		left++
+	}
+	return result
+}
+
 // 26 - 2 = 24
 // m[24] = nil
 // m[2] = 0
